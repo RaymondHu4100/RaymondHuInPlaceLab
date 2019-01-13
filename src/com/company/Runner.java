@@ -5,7 +5,9 @@ public class Runner
     public static void main(String[] args)
     {
         System.out.println("Insertion Sort:");
+        long time = System.nanoTime();
         int[] testArr = InPlaceUtils.randIntArray(10);
+        time = System.nanoTime() - time;
         System.out.print("Before: ");
         for (int num:testArr)
         {
@@ -19,9 +21,12 @@ public class Runner
             System.out.print(num+" ");
         }
         System.out.println();
+        System.out.println("Time Taken: " + time);
         System.out.println("");
         System.out.println("Selection Sort:");
+        long time1 = System.nanoTime();
         double[] testArr1 = InPlaceUtils.randDoubleArray(10);
+        time1 = System.nanoTime() - time1;
         System.out.print("Before: ");
         for (double num:testArr1)
         {
@@ -35,9 +40,12 @@ public class Runner
             System.out.print(num+" ");
         }
         System.out.println();
+        System.out.println("Time Taken: " + time1);
         System.out.println("");
         System.out.println("Bubble Sort:");
+        long time2 = System.nanoTime();
         String[] testArr2 = InPlaceUtils.randStringArray(10, 5);
+        time2 = System.nanoTime() - time2;
         System.out.print("Before: ");
         for (String num:testArr2)
         {
@@ -51,5 +59,6 @@ public class Runner
             System.out.print(num+" ");
         }
         System.out.println();
+        System.out.println("Time Taken: " + time2);
     }
 }
