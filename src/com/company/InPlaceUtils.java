@@ -97,7 +97,43 @@ public class InPlaceUtils
         }
         return true;
     }
-    public static boolean checkSum(int[] before, int[] after)
+    public static boolean checkSumInt(int[] before, int[] after)
+    {
+        int beforeSum = 0;
+        int afterSum = 0;
+        for(int i = 0; i < before.length; i++)
+        {
+            before[i] += beforeSum;
+        }
+        for(int i = 0; i < after.length; i++)
+        {
+            after[i] += afterSum;
+        }
+        if(beforeSum != afterSum)
+        {
+            return false;
+        }
+        return true;
+    }
+    public static boolean checkSumDouble(double[] before, double[] after)
+    {
+        int beforeSum = 0;
+        int afterSum = 0;
+        for(int i = 0; i < before.length; i++)
+        {
+            before[i] += beforeSum;
+        }
+        for(int i = 0; i < after.length; i++)
+        {
+            after[i] += afterSum;
+        }
+        if(beforeSum != afterSum)
+        {
+            return false;
+        }
+        return true;
+    }
+    public static boolean checkSumString(String[] before, String[] after)
     {
         int beforeSum = 0;
         int afterSum = 0;

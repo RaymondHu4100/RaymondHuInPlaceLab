@@ -4,6 +4,9 @@ public class Runner
 {
     public static void main(String[] args)
     {
+        int[] testArrAfter = {};
+        double[] testArr1After = {};
+        String[] testArr2After = {};
         System.out.println("Insertion Sort:");
         long time = System.nanoTime();
         int[] testArr = InPlaceUtils.randIntArray(10);
@@ -19,10 +22,12 @@ public class Runner
         for (int num:testArr)
         {
             System.out.print(num+" ");
+            testArr = testArrAfter;
         }
         System.out.println();
         System.out.println("Time Taken: " + time);
         System.out.println("The array is sorted: " + InPlaceUtils.isSortedInt(testArr));
+        System.out.println("The before and after sums are equal: " + InPlaceUtils.checkSumInt(testArr, testArrAfter));
         System.out.println("");
         System.out.println("Selection Sort:");
         long time1 = System.nanoTime();
@@ -39,10 +44,12 @@ public class Runner
         for (double num:testArr1)
         {
             System.out.print(num+" ");
+            testArr1 = testArr1After;
         }
         System.out.println();
         System.out.println("Time Taken: " + time1);
         System.out.println("The array is sorted: " + InPlaceUtils.isSortedDouble(testArr1));
+        System.out.println("The before and after sums are equal: " + InPlaceUtils.checkSumDouble(testArr1, testArr1After));
         System.out.println("");
         System.out.println("Bubble Sort:");
         long time2 = System.nanoTime();
@@ -59,9 +66,11 @@ public class Runner
         for (String num:testArr2)
         {
             System.out.print(num+" ");
+            testArr2 = testArr2After;
         }
         System.out.println();
         System.out.println("Time Taken: " + time2);
         System.out.println("The array is sorted: " + InPlaceUtils.isSortedString(testArr2));
+        System.out.println("The before and after sums are equal: " + InPlaceUtils.checkSumString(testArr2, testArr2After));
     }
 }
