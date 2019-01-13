@@ -22,6 +22,7 @@ public class Runner
         }
         System.out.println();
         System.out.println("Time Taken: " + time);
+        System.out.println("The array is sorted: " + InPlaceUtils.isSortedInt(testArr));
         System.out.println("");
         System.out.println("Selection Sort:");
         long time1 = System.nanoTime();
@@ -41,6 +42,7 @@ public class Runner
         }
         System.out.println();
         System.out.println("Time Taken: " + time1);
+        System.out.println("The array is sorted: " + InPlaceUtils.isSortedDouble(testArr1));
         System.out.println("");
         System.out.println("Bubble Sort:");
         long time2 = System.nanoTime();
@@ -60,5 +62,6 @@ public class Runner
         }
         System.out.println();
         System.out.println("Time Taken: " + time2);
+        System.out.println("The array is sorted: " + InPlaceUtils.isSortedString(testArr2));
     }
 }

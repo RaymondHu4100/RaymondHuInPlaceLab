@@ -64,4 +64,55 @@ public class InPlaceUtils
         }
         return minInd;
     }
+    public static boolean isSortedInt(int[] arr)
+    {
+        for(int i = 0; i < (arr.length-1); i++)
+        {
+            if (arr[i] > arr[i+1])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean isSortedDouble(double[] arr)
+    {
+        for(int i = 0; i < (arr.length-1); i++)
+        {
+            if (arr[i] > arr[i+1])
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean isSortedString(String[] arr)
+    {
+        for(int i = 0; i < (arr.length-1); i++)
+        {
+            if (arr[i].compareTo(arr[i+1]) > 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static boolean checkSum(int[] before, int[] after)
+    {
+        int beforeSum = 0;
+        int afterSum = 0;
+        for(int i = 0; i < before.length; i++)
+        {
+            before[i] += beforeSum;
+        }
+        for(int i = 0; i < after.length; i++)
+        {
+            after[i] += afterSum;
+        }
+        if(beforeSum != afterSum)
+        {
+            return false;
+        }
+        return true;
+    }
 }
